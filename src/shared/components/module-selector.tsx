@@ -46,7 +46,7 @@ export function ModuleSelector() {
       if (selectedModule) {
         router.push(selectedModule.path);
       }
-    } catch (error) {
+    } catch {
       toast({
         variant: 'destructive',
         title: 'Erro ao alterar módulo',

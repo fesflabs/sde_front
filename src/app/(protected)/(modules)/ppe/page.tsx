@@ -1,5 +1,4 @@
 import { Suspense } from 'react';
-import { PPE_MODULE_PATH } from '@/modules/ppe/config';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
