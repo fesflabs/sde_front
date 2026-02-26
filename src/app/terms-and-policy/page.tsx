@@ -1,13 +1,10 @@
-// import Image from 'next/image';
 import React from 'react';
-
-// import logo_fesfsus from '../../../../public/assets/images/logo_login.png';
 
 const TermsAndPolicy: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mx-auto max-w-3xl">
-        <div className="rounded-lg bg-white p-6 shadow-md sm:p-8">
+        <div className="rounded-lg p-6 shadow-md sm:p-8">
           <div className="mb-8 flex justify-center">
             <div className="relative h-[60px] w-[180px]">
               {/* <Image */}

@@ -1,33 +1,25 @@
+// ttt/app/layout.tsx
+
+import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { AppProviders } from '@/providers/providers';
 import { Toaster } from 'sonner';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Transformação Digital - PPE',
-  description: 'Transformação Digital - PPE',
+  title: 'SDE - Sistema Projeto Diálogos Essenciais',
+  description: 'Sistema para acesso rápido a links do evento de Projeto Diálogos Essenciais.',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <AppProviders>{children}</AppProviders>
+    <html lang="pt-br" suppressHydrationWarning className="h-full">
+      <body className={`${inter.className} h-full overflow-hidden`}>
+        <AppProviders>
+          <div className="flex h-full flex-col">{children}</div>
+        </AppProviders>
         <Toaster />
       </body>
     </html>

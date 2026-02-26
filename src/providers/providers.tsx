@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import { TanstackProvider } from '@/providers/query-provider';
 import { AuthProvider } from './auth-provider';
-import { RouteGuard } from '@/features/auth/components/auth-guard';
 import { AlertProvider } from '@/shared/hooks/use-alert';
 
 interface ProvidersProps {
@@ -16,9 +15,7 @@ export function AppProviders({ children }: ProvidersProps) {
   return (
     <TanstackProvider>
       <AlertProvider>
-        <AuthProvider>
-          <RouteGuard>{children}</RouteGuard>
-        </AuthProvider>
+        <AuthProvider>{children}</AuthProvider>
       </AlertProvider>
     </TanstackProvider>
   );
