@@ -5,9 +5,6 @@ export function FooterVisual() {
         viewBox="0 0 1440 320"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        /* h-60: Define uma altura maior para mobile (ajuste o valor conforme desejar).
-           md:h-auto: Mantém a proporção original em telas maiores.
-        */
         className="h-40 w-full md:h-auto"
         preserveAspectRatio="none"
       >
